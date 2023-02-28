@@ -1,0 +1,65 @@
+{
+    "name": "tafarda/iauth",
+
+    "description": "In this package, users' information is supposed to be stored in one hand so that it can be used by any of Tafarda services if needed.",
+    "homepage": "https://gitea.tafarda.ir/TaFarda/IAuthPackageBackend",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "IAuth",
+            "email": "dev@gitea.tafarda",
+            "homepage": "https://gitea.tafarda",
+            "role": "company"
+        },
+        {
+            "name": "Elyas Yavari",
+            "email": "elyasyavari@gmail.com",
+            "homepage": "https://gitea.elyasyavari",
+            "role": "cto"
+        },
+        {
+            "name": "Sara Mohammadi",
+            "email": "mohammadisa996@gmail.com",
+            "homepage": "https://github.com/saramohamadi996",
+            "role": "developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "doctrine/dbal": "^3.2",
+        "illuminate/support": ">=6",
+        "laravel/sanctum": "^3.1",
+        "spatie/laravel-activitylog": "^4.7",
+        "spatie/laravel-medialibrary": "^10.0.0",
+        "spatie/laravel-permission": "^5.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "TaFarda\\IAuth\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TaFarda\\IAuth\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\TaFarda\\IAuth\\Providers\\IAuthServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
